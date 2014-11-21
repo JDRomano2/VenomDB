@@ -4,7 +4,19 @@ class StaticPagesControllerTest < ActionController::TestCase
   test "should get home" do
     get :home
     assert_response :success
-    assert_select "title", "Home | VenomDB"
+    assert_select "title", "VenomDB"
+  end
+
+  test "should get data" do
+    get :data
+    assert_response :success
+    assert_select "title", "Data | VenomDB"
+  end
+
+  test "should get download" do
+    get :download
+    assert_response :success
+    assert_select "title", "Download | VenomDB"
   end
 
   test "should get about" do
