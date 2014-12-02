@@ -1,0 +1,2 @@
+module ManualVenomsHelper
+end

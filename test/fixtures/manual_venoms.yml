@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  venom: MyText
+  effect: MyText
+  pmid: MyText
+
+two:
+  venom: MyText
+  effect: MyText
+  pmid: MyText
