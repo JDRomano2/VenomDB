@@ -1,5 +1,10 @@
 <% provide(:title, 'Data') %>
 <h1>Data</h1>
-<p>
-  [Description of the different databases, and links to each of them]
-</p>
+
+<div class="center jumbotron">
+  <p>
+    Click on the following button to go to the database tables:
+  </p>
+
+  <%= link_to "Go To Database", admin_path, class: "btn btn-lg btn-primary" %>
+</div>
