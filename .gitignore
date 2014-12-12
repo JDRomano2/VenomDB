@@ -17,3 +17,4 @@
 
 # Ignore vim swapfiles
 *.swp
+.elasticbeanstalk/
