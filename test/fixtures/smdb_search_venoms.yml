@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  compound: MyString
+  predicate: MyString
+  object: MyString
+  pmid: MyString
+
+two:
+  compound: MyString
+  predicate: MyString
+  object: MyString
+  pmid: MyString
