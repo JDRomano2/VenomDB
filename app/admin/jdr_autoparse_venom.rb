@@ -1,4 +1,4 @@
-ActiveAdmin.register JdrAutoparseVenom do
+ActiveAdmin.register JdrAutoparseVenom, :as => "JDR Autoparse Venom" do
 
 
   # See permitted parameters documentation:

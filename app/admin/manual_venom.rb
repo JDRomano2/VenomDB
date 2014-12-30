@@ -1,4 +1,4 @@
-ActiveAdmin.register ManualVenom do
+ActiveAdmin.register ManualVenom, :as => "Curated Venom" do
 
 
   # See permitted parameters documentation:
