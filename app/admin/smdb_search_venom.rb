@@ -1,4 +1,4 @@
-ActiveAdmin.register SmdbSearchVenom, :as => "SMDB_Search Venoms" do
+ActiveAdmin.register SmdbSearchVenom, :as => "SemanticVExtractor Record" do
 
 
   # See permitted parameters documentation:
