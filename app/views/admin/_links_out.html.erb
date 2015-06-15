@@ -1,0 +1,12 @@
+<!-- This is a demo of a partial being inserted into an ActiveAdmin pane. -->
+<!-- <br/> -->
+<!-- Does ActionView render line breaks correctly?? Yes it does!!! Just need to insert it as HTML (not Ruby escape chars) -->
+<!-- <br/> -->
+<!-- Testing a link: <%= link_to "Google", "http://www.google.com" %> -->
+<!-- <br/> -->
+<!-- Testing use of venom name in template: <%= "#{venom.venom}" %> -->
+Link to:
+<p/>
+<%= link_to "PubMed", "http://www.ncbi.nlm.nih.gov/pubmed/#{venom.pmid}" %>
+<p/>
+<%= link_to "UniProt", "http://www.uniprot.org/uniprot/?query=#{venom.venom}&sort=score" %>

@@ -16,5 +16,21 @@ ActiveAdmin.register ManualVenom, :as => "Manually Curated Venom" do
   
   permit_params :venom, :effect, :pmid
 
+  show do
+
+    panel "Venom information" do
+      #text_node "Some text"
+      attributes_table do
+        row :venom
+        row :effect
+        row :pmid
+      end
+    end
+
+    panel "Links to external resources" do
+      render('/admin/links_out', :model => 'manual_venoms', :venom => manually_curated_venom)
+    end
+    
+  end    
 
 end
