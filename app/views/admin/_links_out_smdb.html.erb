@@ -1,0 +1,6 @@
+<%= link_to "PubMed", "http://www.ncbi.nlm.nih.gov/pubmed/#{compound.pmid}" %>
+<p/>
+<p/>
+The links below will run search queries for the chemical compound of interest in the respective online databases. Please note that - mainly due to inconsistencies in naming venoms and other chemical compounds - the search queries may or may not return usable results. 
+<p/>
+<%= link_to "UniProt", "http://www.uniprot.org/uniprot/?query=#{compound.compound}&sort=score" %>

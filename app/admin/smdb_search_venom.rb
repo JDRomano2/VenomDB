@@ -14,5 +14,30 @@ ActiveAdmin.register SmdbSearchVenom, :as => "SemanticVExtractor Record" do
   #   permitted
   # end
 
+  permit_params :compound, :predicate, :object, :pmid
+
+  show do
+
+    panel "Venom information" do
+      #text_node "Some text"
+      attributes_table do
+        row :compound
+        row :predicate
+        row :object
+        row :pmid
+      end
+
+      render('/admin/links_out_smdb', :model => 'smdb_search_venoms', :compound => semantic_v_extractor_record)
+    end
+
+  end
+
+  sidebar "Metadata", only: :show do
+    
+    attributes_table_for semantic_v_extractor_record do
+      row :created_at
+      row :updated_at
+    end
+  end
 
 end

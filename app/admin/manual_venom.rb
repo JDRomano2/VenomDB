@@ -1,6 +1,5 @@
 ActiveAdmin.register ManualVenom, :as => "Manually Curated Venom" do
 
-
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
@@ -25,12 +24,22 @@ ActiveAdmin.register ManualVenom, :as => "Manually Curated Venom" do
         row :effect
         row :pmid
       end
-    end
 
-    panel "Links to external resources" do
       render('/admin/links_out', :model => 'manual_venoms', :venom => manually_curated_venom)
     end
-    
-  end    
+
+    # panel "Links to external resources" do
+    #   render('/admin/links_out', :model => 'manual_venoms', :venom => manually_curated_venom)
+    # end
+
+  end
+
+  sidebar "Metadata", only: :show do
+    #render('/admin/metadata', :model => 'manual_venoms', :venom => manually_curated_venom)
+    attributes_table_for manually_curated_venom do
+      row :created_at
+      row :updated_at
+    end
+  end
 
 end

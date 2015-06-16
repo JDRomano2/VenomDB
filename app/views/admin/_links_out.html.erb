@@ -5,8 +5,12 @@
 <!-- Testing a link: <%= link_to "Google", "http://www.google.com" %> -->
 <!-- <br/> -->
 <!-- Testing use of venom name in template: <%= "#{venom.venom}" %> -->
-Link to:
-<p/>
-<%= link_to "PubMed", "http://www.ncbi.nlm.nih.gov/pubmed/#{venom.pmid}" %>
-<p/>
-<%= link_to "UniProt", "http://www.uniprot.org/uniprot/?query=#{venom.venom}&sort=score" %>
+<hr>
+<h3>Search for venom in external resources:</h3>
+<p><%= link_to "PubMed (direct link to cited article)", "http://www.ncbi.nlm.nih.gov/pubmed/#{venom.pmid}" %></p>
+<p><%= link_to "UniProt", "http://www.uniprot.org/uniprot/?query=#{venom.venom}&sort=score" %></p>
+<p><%= link_to "GenomeNet", "http://www.genome.jp/dbget-bin/www_bfind_sub?mode=bfind&max_hit=1000&locale=en&serv=gn&dbkey=all&keywords=#{venom.venom}&page=1" %></p>
+<p><%= link_to "GenBank", "http://www.ncbi.nlm.nih.gov/nuccore/?term=#{venom.venom}" %></p>
+<p><%= link_to "NCBI Protein (GenPept)", "http://www.ncbi.nlm.nih.gov/protein/?term=#{venom.venom}" %></p>
+<hr>
+<h3>Search for effect in external resources:</h3>
