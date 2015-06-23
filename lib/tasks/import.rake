@@ -15,6 +15,11 @@ namespace :db do
     puts answer
 
     if answer.downcase == "y"
+
+      ## Remove existing records
+      JdrAutoparseVenom.delete_all
+      SmdbSearchVenom.delete_all
+      
       file1 = "db/data/jdr_autoparse_venoms.csv"
       file2 = "db/data/smdb_search_venoms.csv"
       csv_text_1 = File.read(file1)
