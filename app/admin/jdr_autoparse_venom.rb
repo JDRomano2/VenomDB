@@ -1,3 +1,4 @@
+# coding: utf-8
 ActiveAdmin.register JdrAutoparseVenom, :as => "VExtractor Record" do
 
   # See permitted parameters documentation:
@@ -15,17 +16,101 @@ ActiveAdmin.register JdrAutoparseVenom, :as => "VExtractor Record" do
 
   permit_params :venom, :effect, :pmid
 
-  show do
+  index do
+    #column("ID", :sortable => :id) {|item| link_to "#{item.id}", admin_v_extractor_records_path(item) }
+    selectable_column
+    id_column
+    #actions
+    column :venom
+    column :effect
+    column :pmid
+  end
+
+  show :title => :id do
 
     panel "Venom information" do
       #text_node "Some text"
-      attributes_table do
-        row :venom
-        row :effect
-        row :pmid
+      # attributes_table do
+      #   row :venom
+      #   row :effect
+      #   row :pmid
+      # end
+
+      table do
+        tr :class => "odd" do
+          td "VENOM: ", :style => "font-weight:bold"
+          td "#{v_extractor_record.venom}", :style => "font-weight:bold"
+        end
+        tr :class => "odd" do
+          td "Search in:", :style => "font-style:italic"
+          td link_to "UniProt",
+                     "http://www.uniprot.org/uniprot/?query=#{v_extractor_record.venom}&sort=score" 
+        end
+        tr :class => "odd" do
+          td
+          td link_to "GenomeNet",
+                     "http://www.genome.jp/dbget-bin/www_bfind_sub?mode=bfind&max_hit=1000&locale=en&serv=gn&dbkey=all&keywords=#{v_extractor_record.venom}&page=1"
+        end
+        tr :class => "odd" do
+          td
+          td link_to "GenBank",
+                     "http://www.ncbi.nlm.nih.gov/nuccore/?term=#{v_extractor_record.venom}"
+        end
+        tr :class => "odd" do
+          td
+          td link_to "NCBI Protein (GenPept)",
+                     "http://www.ncbi.nlm.nih.gov/protein/?term=#{v_extractor_record.venom}"
+        end
+        tr :class => "odd" do
+          td
+          td link_to "EBI Search",
+                     "https://www.ebi.ac.uk/ebisearch/search.ebi?query=#{v_extractor_record.venom}&db=allebi&requestFrom=ebi_index"
+        end
+        
+        tr :class => "even" do
+          td "EFFECT: ", :style => "font-weight:bold"
+          td "#{v_extractor_record.effect}", :style => "font-weight:bold"
+        end
+        tr :class => "even" do
+          td "Search in:", :style => "font-style:italic"
+          td link_to "UniProt",
+                     "http://www.uniprot.org/uniprot/?query=#{v_extractor_record.effect}&sort=score" 
+        end
+        tr :class => "even" do
+          td
+          td link_to "GenomeNet",
+                     "http://www.genome.jp/dbget-bin/www_bfind_sub?mode=bfind&max_hit=1000&locale=en&serv=gn&dbkey=all&keywords=#{v_extractor_record.effect}&page=1"
+        end
+        tr :class => "even" do
+          td
+          td link_to "GenBank",
+                     "http://www.ncbi.nlm.nih.gov/nuccore/?term=#{v_extractor_record.effect}"
+        end
+        tr :class => "even" do
+          td
+          td link_to "NCBI Protein (GenPept)",
+                     "http://www.ncbi.nlm.nih.gov/protein/?term=#{v_extractor_record.effect}"
+        end
+        tr :class => "even" do
+          td
+          td link_to "EBI Search",
+                     "https://www.ebi.ac.uk/ebisearch/search.ebi?query=#{v_extractor_record.effect}&db=allebi&requestFrom=ebi_index"
+        end
+
+        tr :class => "odd" do
+          td "PMID: (direct link)", :style => "font-weight:bold"
+          td link_to "#{v_extractor_record.pmid}",
+                     "http://www.ncbi.nlm.nih.gov/pubmed/#{v_extractor_record.pmid}"
+        end
       end
 
-      render('/admin/links_out', :model => 'jdr_autoparse_venoms', :venom => v_extractor_record)
+      hr
+
+      div :style => "font-style:italic" do
+        simple_format "Note: the search query links above generally do not map to exact records, and not all searches will return matching results."
+      end
+      
+      # render('/admin/links_out', :model => 'jdr_autoparse_venoms', :venom => v_extractor_record)
     end
 
   end
@@ -36,6 +121,25 @@ ActiveAdmin.register JdrAutoparseVenom, :as => "VExtractor Record" do
       row :created_at
       row :updated_at
     end
+  end
+
+  sidebar "Selected search queries" do
+    ### Content here! (how do I build search queries??)
+    table do
+      tr do
+        td link_to "Exenatide (1878)", "http://localhost:3000/admin/v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=exenatide&commit=Filter&order=id_desc"
+      end
+      tr do
+        td link_to "Bombesin (1119)", "http://localhost:3000/admin/v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=bombesin&commit=Filter&order=id_desc"
+      end
+      tr do
+        td link_to "Ancrod (708)", "http://localhost:3000/admin/v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=ancrod&commit=Filter&order=id_desc"
+      end
+      tr do
+        td link_to "Ziconotide (251)", "http://localhost:3000/admin/v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=ziconotide&commit=Filter&order=id_desc"
+      end
+    end
+
   end
 
 end

@@ -43,12 +43,15 @@ ActiveAdmin.register_page "Dashboard" do
       column do
         panel "Recent News and Updates" do
           ul do
+            li "2015-06-24: Individual database record pages now have search query links for a number of related databases and ontologies"
             li "2015-06-23: 'Semantic VExtractor' and 'VExtractor' have been manually reviewed for bad records and updated on the website"
           end
         end
       end
       
     end
+
+    hr
 
     panel "Description of database tables" do
       para "VenomKB currently contains 3 database tables:"
