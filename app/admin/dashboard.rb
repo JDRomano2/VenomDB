@@ -49,6 +49,18 @@ ActiveAdmin.register_page "Dashboard" do
       end
       
     end
+
+    panel "Description of database tables" do
+      para "VenomKB currently contains 3 database tables:"
+
+      ul do
+        li "Manually Curated Venoms: Manually-curated putative venom therapies, with relevant PubMed IDs"
+        li "JDRAutoparse Venoms: Records returned by the JDRAutoparse script, which uses the NCBO Annotator to extract possible venom compounds and their physiologic effects from MEDLINE abstracts"
+        li "SMDB_Search Venoms: Possible venoms identified in MEDLINE using the SMDB_Search utility to extract semantic knowledge from Semantic MEDLINE"
+      end
+
+      para "To browse each of these databases interactively, please click on the links at the top of the page"
+    end
     
   end # content
 end

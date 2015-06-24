@@ -3,11 +3,20 @@
 
   <h2>
     This is the home page for VenomKB,
-    a new knowledge base used for aggregating and identifying
+    a new knowledge base for aggregating and identifying
     therapeutic uses of animal venoms and venom compounds.
   </h2>
 
   <%= link_to "Download data", signup_path, class: "btn btn-lg btn-primary" %>
+
+	<%= link_to "Explore database", admin_path, class: "btn btn-lg btn-primary" %>
+</div>
+
+<div class="alert alert-info" role="alert">
+	<p>
+		VenomKB is the subject of a research article currently in review. To cite VenomKB, please use the following format:
+	</p>
+	<p>"Romano JD, Tatonetti NP; VenomKB - A new knowledge base for facilitating the validation of putative venom therapies <i>[Submitted]</i> 2015."</p>
 </div>
 
 <%= link_to image_tag("rails.png", alt: "Rails logo"), 'http://rubyonrails.org/' %>

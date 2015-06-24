@@ -1,0 +1,2 @@
+class SmdbSearchVenomsController < ApplicationController
+end

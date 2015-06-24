@@ -1,5 +1,13 @@
 <% provide(:title, 'Download') %>
 <h1>Download</h1>
-<p>
-  [Description of the available data downloads]
-</p>
+
+<p>The following links lead to manually-exported raw data dumps from the VenomKB database tables. Each file is in CSV format. In order to download the data in a different format (or to download the most up-to-date versions of the database), navigate to the <%= link_to "interactive database browser", admin_path %>, select the desired entries, and click the appropriate "Download" button at the bottom of the page of database records.</p>
+
+<!-- <p><%= link_to "VExtractor", "/data/vextractor_2015_06_23.csv" %></p> -->
+<!-- <p><%= link_to "Semantic VExtractor", "/data/semantic_vextractor_2015_06_23.csv" %></p> -->
+
+<div class="btn-group btn-group-justified">
+	<%= link_to "Manual Venoms", "/data/manual_venoms_2015_06_23.csv", :class => "btn btn-default btn-lg" %>
+	<%= link_to "VExtractor", "/data/vextractor_2015_06_23.csv", :class => "btn btn-default btn-lg" %>
+	<%= link_to "Semantic VExtractor", "/data/semantic_vextractor_2015_06_23.csv", :class => "btn btn-default btn-lg" %>
+</div>

@@ -1,0 +1,2 @@
+class JdrAutoparseVenomsController < ApplicationController
+end
