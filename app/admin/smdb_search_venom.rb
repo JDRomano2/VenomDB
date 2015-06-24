@@ -1,4 +1,4 @@
-ActiveAdmin.register SmdbSearchVenom, :as => "SemanticVExtractor Record" do
+ActiveAdmin.register SmdbSearchVenom, :as => "SemanticVExtractor Record", :namespace => :db do
 
 
   # See permitted parameters documentation:
@@ -73,7 +73,7 @@ ActiveAdmin.register SmdbSearchVenom, :as => "SemanticVExtractor Record" do
         ################
 
         tr :class => "even" do
-          td "PREDICATE: ", :style => "font-weight:bold"
+          td "COMPOUND: ", :style => "font-weight:bold"
           td "#{semantic_v_extractor_record.predicate}", :style => "font-weight:bold"
         end
         

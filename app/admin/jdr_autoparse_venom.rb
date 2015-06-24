@@ -1,5 +1,5 @@
 # coding: utf-8
-ActiveAdmin.register JdrAutoparseVenom, :as => "VExtractor Record" do
+ActiveAdmin.register JdrAutoparseVenom, :as => "VExtractor Record", :namespace => :db do
 
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
