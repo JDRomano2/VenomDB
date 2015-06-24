@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'signup'    => 'users#new'
   get 'login'     => 'sessions#new'
   get 'admin'     => 'admin/dashboard#index'
+  get 'db'        => 'db/dashboard#index'
   post 'login'    => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
   resources :users
