@@ -26,7 +26,7 @@ ActiveAdmin.register JdrAutoparseVenom, :as => "VExtractor Record", :namespace =
     column :pmid
   end
 
-  show :title => :id do
+  show do
 
     panel "Venom information" do
       #text_node "Some text"
@@ -36,73 +36,75 @@ ActiveAdmin.register JdrAutoparseVenom, :as => "VExtractor Record", :namespace =
       #   row :pmid
       # end
 
-      table do
-        tr :class => "odd" do
-          td "VENOM: ", :style => "font-weight:bold"
-          td "#{v_extractor_record.venom}", :style => "font-weight:bold"
-        end
-        tr :class => "odd" do
-          td "Search in:", :style => "font-style:italic"
-          td link_to "UniProt",
-                     "http://www.uniprot.org/uniprot/?query=#{v_extractor_record.venom}&sort=score" 
-        end
-        tr :class => "odd" do
-          td
-          td link_to "GenomeNet",
-                     "http://www.genome.jp/dbget-bin/www_bfind_sub?mode=bfind&max_hit=1000&locale=en&serv=gn&dbkey=all&keywords=#{v_extractor_record.venom}&page=1"
-        end
-        tr :class => "odd" do
-          td
-          td link_to "GenBank",
-                     "http://www.ncbi.nlm.nih.gov/nuccore/?term=#{v_extractor_record.venom}"
-        end
-        tr :class => "odd" do
-          td
-          td link_to "NCBI Protein (GenPept)",
-                     "http://www.ncbi.nlm.nih.gov/protein/?term=#{v_extractor_record.venom}"
-        end
-        tr :class => "odd" do
-          td
-          td link_to "EBI Search",
-                     "https://www.ebi.ac.uk/ebisearch/search.ebi?query=#{v_extractor_record.venom}&db=allebi&requestFrom=ebi_index"
-        end
+      # table do
+      #   tr :class => "odd" do
+      #     td "VENOM: ", :style => "font-weight:bold"
+      #     td "#{v_extractor_record.venom}", :style => "font-weight:bold"
+      #   end
+      #   tr :class => "odd" do
+      #     td "Search in:", :style => "font-style:italic"
+      #     td link_to "UniProt",
+      #                "http://www.uniprot.org/uniprot/?query=#{v_extractor_record.venom}&sort=score" 
+      #   end
+      #   tr :class => "odd" do
+      #     td
+      #     td link_to "GenomeNet",
+      #                "http://www.genome.jp/dbget-bin/www_bfind_sub?mode=bfind&max_hit=1000&locale=en&serv=gn&dbkey=all&keywords=#{v_extractor_record.venom}&page=1"
+      #   end
+      #   tr :class => "odd" do
+      #     td
+      #     td link_to "GenBank",
+      #                "http://www.ncbi.nlm.nih.gov/nuccore/?term=#{v_extractor_record.venom}"
+      #   end
+      #   tr :class => "odd" do
+      #     td
+      #     td link_to "NCBI Protein (GenPept)",
+      #                "http://www.ncbi.nlm.nih.gov/protein/?term=#{v_extractor_record.venom}"
+      #   end
+      #   tr :class => "odd" do
+      #     td
+      #     td link_to "EBI Search",
+      #                "https://www.ebi.ac.uk/ebisearch/search.ebi?query=#{v_extractor_record.venom}&db=allebi&requestFrom=ebi_index"
+      #   end
         
-        tr :class => "even" do
-          td "EFFECT: ", :style => "font-weight:bold"
-          td "#{v_extractor_record.effect}", :style => "font-weight:bold"
-        end
-        tr :class => "even" do
-          td "Search in:", :style => "font-style:italic"
-          td link_to "UniProt",
-                     "http://www.uniprot.org/uniprot/?query=#{v_extractor_record.effect}&sort=score" 
-        end
-        tr :class => "even" do
-          td
-          td link_to "GenomeNet",
-                     "http://www.genome.jp/dbget-bin/www_bfind_sub?mode=bfind&max_hit=1000&locale=en&serv=gn&dbkey=all&keywords=#{v_extractor_record.effect}&page=1"
-        end
-        tr :class => "even" do
-          td
-          td link_to "GenBank",
-                     "http://www.ncbi.nlm.nih.gov/nuccore/?term=#{v_extractor_record.effect}"
-        end
-        tr :class => "even" do
-          td
-          td link_to "NCBI Protein (GenPept)",
-                     "http://www.ncbi.nlm.nih.gov/protein/?term=#{v_extractor_record.effect}"
-        end
-        tr :class => "even" do
-          td
-          td link_to "EBI Search",
-                     "https://www.ebi.ac.uk/ebisearch/search.ebi?query=#{v_extractor_record.effect}&db=allebi&requestFrom=ebi_index"
-        end
+      #   tr :class => "even" do
+      #     td "EFFECT: ", :style => "font-weight:bold"
+      #     td "#{v_extractor_record.effect}", :style => "font-weight:bold"
+      #   end
+      #   tr :class => "even" do
+      #     td "Search in:", :style => "font-style:italic"
+      #     td link_to "UniProt",
+      #                "http://www.uniprot.org/uniprot/?query=#{v_extractor_record.effect}&sort=score" 
+      #   end
+      #   tr :class => "even" do
+      #     td
+      #     td link_to "GenomeNet",
+      #                "http://www.genome.jp/dbget-bin/www_bfind_sub?mode=bfind&max_hit=1000&locale=en&serv=gn&dbkey=all&keywords=#{v_extractor_record.effect}&page=1"
+      #   end
+      #   tr :class => "even" do
+      #     td
+      #     td link_to "GenBank",
+      #                "http://www.ncbi.nlm.nih.gov/nuccore/?term=#{v_extractor_record.effect}"
+      #   end
+      #   tr :class => "even" do
+      #     td
+      #     td link_to "NCBI Protein (GenPept)",
+      #                "http://www.ncbi.nlm.nih.gov/protein/?term=#{v_extractor_record.effect}"
+      #   end
+      #   tr :class => "even" do
+      #     td
+      #     td link_to "EBI Search",
+      #                "https://www.ebi.ac.uk/ebisearch/search.ebi?query=#{v_extractor_record.effect}&db=allebi&requestFrom=ebi_index"
+      #   end
 
-        tr :class => "odd" do
-          td "PMID: (direct link)", :style => "font-weight:bold"
-          td link_to "#{v_extractor_record.pmid}",
-                     "http://www.ncbi.nlm.nih.gov/pubmed/#{v_extractor_record.pmid}"
-        end
-      end
+      #   tr :class => "odd" do
+      #     td "PMID: (direct link)", :style => "font-weight:bold"
+      #     td link_to "#{v_extractor_record.pmid}",
+      #                "http://www.ncbi.nlm.nih.gov/pubmed/#{v_extractor_record.pmid}"
+      #   end
+      # end
+
+      render('/admin/v_extractor_table', :model => 'jdr_autoparse_venoms', :v_extractor_record => v_extractor_record)
 
       hr
 
@@ -123,20 +125,38 @@ ActiveAdmin.register JdrAutoparseVenom, :as => "VExtractor Record", :namespace =
     end
   end
 
-  sidebar "Selected search queries" do
+  sidebar "\"Editor's Choice\" venom queries" do
     ### Content here! (how do I build search queries??)
     table do
       tr do
-        td link_to "Exenatide (1878)", "http://localhost:3000/admin/v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=exenatide&commit=Filter&order=id_desc"
+        td link_to "Exenatide (1878)", "http://venomkb.herokuapp.com/db/v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=exenatide&commit=Filter&order=id_desc"
       end
       tr do
-        td link_to "Bombesin (1119)", "http://localhost:3000/admin/v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=bombesin&commit=Filter&order=id_desc"
+        td link_to "Bombesin (1119)", "http://venomkb.herokuapp.com/db/v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=bombesin&commit=Filter&order=id_desc"
       end
       tr do
-        td link_to "Ancrod (708)", "http://localhost:3000/admin/v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=ancrod&commit=Filter&order=id_desc"
+        td link_to "Ancrod (708)", "http://venomkb.herokuapp.com/db/v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=ancrod&commit=Filter&order=id_desc"
       end
       tr do
-        td link_to "Ziconotide (251)", "http://localhost:3000/admin/v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=ziconotide&commit=Filter&order=id_desc"
+        td link_to "Suborder serpentes (678)", "http://venomkb.herokuapp.com/db/v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=suborder+serpentes&commit=Filter&order=id_desc"
+      end
+      tr do
+        td link_to "Agkistrodon serine proteinase (600)", "http://venomkb.herokuapp.com/db/v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=agkistrodon+serine+proteinase&commit=Filter&order=id_desc"
+      end
+      tr do
+        td link_to "Apis mellifera (528)", "http://venomkb.herokuapp.com/db/v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=apis+mellifera&commit=Filter&order=id_desc"
+      end
+      tr do
+        td link_to "Order araneae (502)", "http://venomkb.herokuapp.com/db/v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=order+araneae&commit=Filter&order=id_desc"
+      end
+      tr do
+        td link_to "Cobra venom (460)", "http://venomkb.herokuapp.com/db/v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=cobra&commit=Filter&order=id_desc"
+      end
+      tr do
+        td link_to "Wasp venom (435)", "http://venomkb.herokuapp.com/db/v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=wasp+venom&commit=Filter&order=id_desc"
+      end
+      tr do
+        td link_to "Ziconotide (251)", "http://venomkb.herokuapp.com/db/v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=ziconotide&commit=Filter&order=id_desc"
       end
     end
 

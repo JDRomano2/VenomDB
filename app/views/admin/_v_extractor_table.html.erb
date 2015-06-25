@@ -1,0 +1,43 @@
+<table>
+  <tr class="odd">
+    <td style="font-weight:bold"> VENOM: </td>
+    <td style="font-weight:bold"> <%= v_extractor_record.venom %> </td>
+  </tr>
+  <tr class="odd">
+    <td style="font-style:italic"> Search in: </td>
+    <td> <%= link_to "UniProt",
+						 "http://www.uniprot.org/uniprot/?query=#{v_extractor_record.venom}&sort=score" %> |
+			<%= link_to "GenomeNet",
+					"http://www.genome.jp/dbget-bin/www_bfind_sub?mode=bfind&max_hit=1000&locale=en&serv=gn&dbkey=all&keywords=#{v_extractor_record.venom}&page=1" %> |
+			<%= link_to "GenBank",
+					"http://www.ncbi.nlm.nih.gov/nuccore/?term=#{v_extractor_record.venom}" %> |
+			<%= link_to "NCBI Protein (GenPept)",
+					"http://www.ncbi.nlm.nih.gov/protein/?term=#{v_extractor_record.venom}" %> |
+			<%= link_to "EBI Search",
+      "https://www.ebi.ac.uk/ebisearch/search.ebi?query=#{v_extractor_record.venom}&db=allebi&requestFrom=ebi_index" %></td>
+	</tr>
+
+	<tr class="even">
+		<td style="font-weight:bold"> EFFECT: </td>
+		<td style="font-weight:bold"> <%= v_extractor_record.effect %> </td>
+	</tr>
+	<tr class="even">
+		<td style="font-style:italic"> Search in: </td>
+		<td> <%= link_to "UniProt", "http://www.uniprot.org/uniprot/?query=#{v_extractor_record.effect}&sort=score" %> |
+			<%= link_to "GenomeNet",
+					"http://www.genome.jp/dbget-bin/www_bfind_sub?mode=bfind&max_hit=1000&locale=en&serv=gn&dbkey=all&keywords=#{v_extractor_record.effect}&page=1" %> |
+			<%= link_to "GenBank",
+					"http://www.ncbi.nlm.nih.gov/nuccore/?term=#{v_extractor_record.effect}" %> |
+			<%= link_to "NCBI Protein (GenPept)",
+					"http://www.ncbi.nlm.nih.gov/protein/?term=#{v_extractor_record.effect}" %> |
+			<%= link_to "EBI Search",
+			"https://www.ebi.ac.uk/ebisearch/search.ebi?query=#{v_extractor_record.effect}&db=allebi&requestFrom=ebi_index" %></td>
+	</tr>
+
+	<tr class="odd">
+		<td style="font-weight:bold"> PMID: </td>
+		<td> <%= link_to "#{v_extractor_record.pmid}",
+			"http://www.ncbi.nlm.nih.gov/pubmed/#{v_extractor_record.pmid}" %> </td>
+	</tr>
+
+</table>

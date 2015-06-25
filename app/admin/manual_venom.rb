@@ -1,3 +1,4 @@
+# coding: utf-8
 ActiveAdmin.register ManualVenom, :as => "Manually Curated Venom", :namespace => :db do
 
   # See permitted parameters documentation:
@@ -25,7 +26,7 @@ ActiveAdmin.register ManualVenom, :as => "Manually Curated Venom", :namespace =>
     column :pmid
   end
 
-  show :title => :id do
+  show do
 
     panel "Venom information" do
       #text_node "Some text"
@@ -123,6 +124,28 @@ ActiveAdmin.register ManualVenom, :as => "Manually Curated Venom", :namespace =>
     attributes_table_for manually_curated_venom do
       row :created_at
       row :updated_at
+    end
+  end
+
+  sidebar "\"Editor's Choice\" venom queries" do
+    ### Content here! (how do I build search queries??)
+    table do
+      tr do
+        td link_to "Exenatide (1878)", "http://venomkb.herokuapp.com/db/v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=exenatide&commit=Filter&order=id_desc"
+      end
+      tr do
+        td link_to "Exenatide (1878)", "http://venomkb.herokuapp.com/db/v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=exenatide&commit=Filter&order=id_desc"
+      end
+      tr do
+        td link_to "Exenatide (1878)", "http://venomkb.herokuapp.com/db/v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=exenatide&commit=Filter&order=id_desc"
+      end
+      tr do
+        td link_to "Exenatide (1878)", "http://venomkb.herokuapp.com/db/v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=exenatide&commit=Filter&order=id_desc"
+      end
+      tr do
+        td link_to "Exenatide (1878)", "http://venomkb.herokuapp.com/db/v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=exenatide&commit=Filter&order=id_desc"
+      end
+
     end
   end
 

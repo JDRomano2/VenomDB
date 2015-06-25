@@ -1,0 +1,48 @@
+<table>
+  <tr class="odd">
+    <td style="font-weight:bold"> COMPOUND: </td>
+    <td style="font-weight:bold"> <%= semantic_v_extractor_record.compound %> </td>
+  </tr>
+  <tr class="odd">
+    <td style="font-style:italic"> Search in: </td>
+    <td> <%= link_to "UniProt",
+						 "http://www.uniprot.org/uniprot/?query=#{semantic_v_extractor_record.compound}&sort=score" %> |
+			<%= link_to "GenomeNet",
+					"http://www.genome.jp/dbget-bin/www_bfind_sub?mode=bfind&max_hit=1000&locale=en&serv=gn&dbkey=all&keywords=#{semantic_v_extractor_record.compound}&page=1" %> |
+			<%= link_to "GenBank",
+					"http://www.ncbi.nlm.nih.gov/nuccore/?term=#{semantic_v_extractor_record.compound}" %> |
+			<%= link_to "NCBI Protein (GenPept)",
+					"http://www.ncbi.nlm.nih.gov/protein/?term=#{semantic_v_extractor_record.compound}" %> |
+			<%= link_to "EBI Search",
+      "https://www.ebi.ac.uk/ebisearch/search.ebi?query=#{semantic_v_extractor_record.compound}&db=allebi&requestFrom=ebi_index" %></td>
+	</tr>
+
+	<tr class="even">
+    <td style="font-weight:bold"> PREDICATE: </td>
+		<td style="font-weight:bold"> <%= semantic_v_extractor_record.predicate %> </td>
+	</tr>
+
+	<tr class="odd">
+		<td style="font-weight:bold"> OBJECT: </td>
+		<td style="font-weight:bold"> <%= semantic_v_extractor_record.object %> </td>
+	</tr>
+	<tr class="odd">
+		<td style="font-style:italic"> Search in: </td>
+		<td> <%= link_to "UniProt", "http://www.uniprot.org/uniprot/?query=#{semantic_v_extractor_record.object}&sort=score" %> |
+			<%= link_to "GenomeNet",
+					"http://www.genome.jp/dbget-bin/www_bfind_sub?mode=bfind&max_hit=1000&locale=en&serv=gn&dbkey=all&keywords=#{semantic_v_extractor_record.object}&page=1" %> |
+			<%= link_to "GenBank",
+					"http://www.ncbi.nlm.nih.gov/nuccore/?term=#{semantic_v_extractor_record.object}" %> |
+			<%= link_to "NCBI Protein (GenPept)",
+					"http://www.ncbi.nlm.nih.gov/protein/?term=#{semantic_v_extractor_record.object}" %> |
+			<%= link_to "EBI Search",
+			"https://www.ebi.ac.uk/ebisearch/search.ebi?query=#{semantic_v_extractor_record.object}&db=allebi&requestFrom=ebi_index" %></td>
+	</tr>
+
+	<tr class="even">
+		<td style="font-weight:bold"> PMID: </td>
+		<td> <%= link_to "#{semantic_v_extractor_record.pmid}",
+			"http://www.ncbi.nlm.nih.gov/pubmed/#{semantic_v_extractor_record.pmid}" %> </td>
+	</tr>
+
+</table>
