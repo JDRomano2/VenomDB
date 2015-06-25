@@ -147,34 +147,34 @@ ActiveAdmin.register SmdbSearchVenom, :as => "SemanticVExtractor Record", :names
     ### Content here! (how do I build search queries??)
     table do
       tr do
-        td link_to "Exenatide (653)", "http://venomkb.herokuapp.com/db/semantic_v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=exenatide&commit=Filter&order=id_desc"
+        td link_to "Exenatide (653)", "http://venomkb.herokuapp.com/db/semantic_v_extractor_records?utf8=✓&q%5Bcompound_equals%5D=exenatide&commit=Filter&order=id_desc"
       end
       tr do
-        td link_to "Bombesin (243)", "http://venomkb.herokuapp.com/db/semantic_v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=bombesin&commit=Filter&order=id_desc"
+        td link_to "Bombesin (243)", "http://venomkb.herokuapp.com/db/semantic_v_extractor_records?utf8=✓&q%5Bcompound_equals%5D=bombesin&commit=Filter&order=id_desc"
       end
       tr do
-        td link_to "Exendin-4 (154)", "http://venomkb.herokuapp.com/db/semantic_v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=exendin-4&commit=Filter&order=id_desc"
+        td link_to "Exendin-4 (154)", "http://venomkb.herokuapp.com/db/semantic_v_extractor_records?utf8=✓&q%5Bcompound_equals%5D=exendin-4&commit=Filter&order=id_desc"
       end
       tr do
-        td link_to "Ziconotide (132)", "http://venomkb.herokuapp.com/db/semantic_v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=ziconotide&commit=Filter&order=id_desc"
+        td link_to "Ziconotide (132)", "http://venomkb.herokuapp.com/db/semantic_v_extractor_records?utf8=✓&q%5Bcompound_equals%5D=ziconotide&commit=Filter&order=id_desc"
       end
       tr do
-        td link_to "Ancrod (120)", "http://venomkb.herokuapp.com/db/semantic_v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=ancrod&commit=Filter&order=id_desc"
+        td link_to "Ancrod (120)", "http://venomkb.herokuapp.com/db/semantic_v_extractor_records?utf8=✓&q%5Bcompound_equals%5D=ancrod&commit=Filter&order=id_desc"
       end
       tr do
-        td link_to "Cilengitide (91)", "http://venomkb.herokuapp.com/db/semantic_v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=cilengitide&commit=Filter&order=id_desc"
+        td link_to "Cilengitide (91)", "http://venomkb.herokuapp.com/db/semantic_v_extractor_records?utf8=✓&q%5Bcompound_equals%5D=cilengitide&commit=Filter&order=id_desc"
       end
       tr do
-        td link_to "Melittin (81)", "http://venomkb.herokuapp.com/db/semantic_v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=melittin&commit=Filter&order=id_desc"
+        td link_to "Melittin (81)", "http://venomkb.herokuapp.com/db/semantic_v_extractor_records?utf8=✓&q%5Bcompound_equals%5D=melittin&commit=Filter&order=id_desc"
       end
       tr do
-        td link_to "Liraglutide (78)", "http://venomkb.herokuapp.com/db/semantic_v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=liraglutide&commit=Filter&order=id_desc"
+        td link_to "Liraglutide (78)", "http://venomkb.herokuapp.com/db/semantic_v_extractor_records?utf8=✓&q%5Bcompound_equals%5D=liraglutide&commit=Filter&order=id_desc"
       end
       tr do
-        td link_to "Bee venom (68)", "http://venomkb.herokuapp.com/db/semantic_v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=bee+venom&commit=Filter&order=id_desc"
+        td link_to "Bee venom (68)", "http://venomkb.herokuapp.com/db/semantic_v_extractor_records?utf8=✓&q%5Bcompound_equals%5D=bee+venom&commit=Filter&order=id_desc"
       end
       tr do
-        td link_to "Batroxobin (36)", "http://venomkb.herokuapp.com/db/semantic_v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=batroxobin&commit=Filter&order=id_desc"
+        td link_to "Batroxobin (36)", "http://venomkb.herokuapp.com/db/semantic_v_extractor_records?utf8=✓&q%5Bcompound_equals%5D=batroxobin&commit=Filter&order=id_desc"
       end
     end
   end

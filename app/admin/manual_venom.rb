@@ -131,21 +131,20 @@ ActiveAdmin.register ManualVenom, :as => "Manually Curated Venom", :namespace =>
     ### Content here! (how do I build search queries??)
     table do
       tr do
-        td link_to "Exenatide (1878)", "http://venomkb.herokuapp.com/db/v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=exenatide&commit=Filter&order=id_desc"
+        td link_to "Bombesin (54)", "http://venomkb.herokuapp.com/db/manually_curated_venoms?utf8=✓&q%5Bvenom_equals%5D=bombesin&commit=Filter&order=id_desc"
       end
       tr do
-        td link_to "Exenatide (1878)", "http://venomkb.herokuapp.com/db/v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=exenatide&commit=Filter&order=id_desc"
+        td link_to "Ancrod (25)", "http://venomkb.herokuapp.com/db/manually_curated_venoms?utf8=✓&q%5Bvenom_equals%5D=ancrod&commit=Filter&order=id_desc"
       end
       tr do
-        td link_to "Exenatide (1878)", "http://venomkb.herokuapp.com/db/v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=exenatide&commit=Filter&order=id_desc"
+        td link_to "Exenatide (23)", "http://venomkb.herokuapp.com/db/manually_curated_venoms?utf8=✓&q%5Bvenom_equals%5D=exenatide&commit=Filter&order=id_desc"
       end
       tr do
-        td link_to "Exenatide (1878)", "http://venomkb.herokuapp.com/db/v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=exenatide&commit=Filter&order=id_desc"
+        td link_to "Cobra venom factor (11)", "http://venomkb.herokuapp.com/db/manually_curated_venoms?utf8=✓&q%5Bvenom_equals%5D=cobra+venom+factor&commit=Filter&order=id_desc"
       end
       tr do
-        td link_to "Exenatide (1878)", "http://venomkb.herokuapp.com/db/v_extractor_records?utf8=✓&q%5Bvenom_equals%5D=exenatide&commit=Filter&order=id_desc"
+        td link_to "Eledoisin (9)", "http://venomkb.herokuapp.com/db/manually_curated_venoms?utf8=✓&q%5Bvenom_equals%5D=eledoisin&commit=Filter&order=id_desc"
       end
-
     end
   end
 
