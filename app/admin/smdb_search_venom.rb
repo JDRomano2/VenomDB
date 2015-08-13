@@ -133,6 +133,8 @@ ActiveAdmin.register SmdbSearchVenom, :as => "SemanticVExtractor Record", :names
       #render('/admin/links_out_smdb', :model => 'smdb_search_venoms', :compound => semantic_v_extractor_record)
     end
 
+    active_admin_comments
+
   end
 
   sidebar "Metadata", only: :show do

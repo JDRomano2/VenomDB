@@ -117,6 +117,8 @@ ActiveAdmin.register ManualVenom, :as => "Manually Curated Venom", :namespace =>
     #   render('/admin/links_out', :model => 'manual_venoms', :venom => manually_curated_venom)
     # end
 
+    active_admin_comments
+
   end
 
   sidebar "Metadata", only: :show do

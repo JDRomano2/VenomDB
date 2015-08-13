@@ -17,21 +17,27 @@ namespace :db do
     if answer.downcase == "y"
 
       ## Remove existing records
+      puts "Removing existing records..."
       JdrAutoparseVenom.delete_all
       SmdbSearchVenom.delete_all
-      
+
+      puts "Loading fresh records from CSV"
       file1 = "db/data/jdr_autoparse_venoms.csv"
       file2 = "db/data/smdb_search_venoms.csv"
       csv_text_1 = File.read(file1)
       csv_1 = CSV.parse(csv_text_1, :headers => true)
+      puts "Populating JdrAutoparsevenoms..."
       csv_1.each do |row|
         JdrAutoparseVenom.create!(row.to_hash)
       end
       csv_text_2 = File.read(file2)
       csv_2 = CSV.parse(csv_text_2, :headers => true)
+      puts "Populating SmdbSearchvenoms..."
       csv_2.each do |row|
         SmdbSearchVenom.create!(row.to_hash)
       end
+
+      puts "Done!"
     else
       puts "Aborting rake task"
       return false

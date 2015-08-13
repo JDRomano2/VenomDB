@@ -54,14 +54,11 @@ ActiveAdmin.setup do |config|
   #
   # This setting changes the method which Active Admin calls
   # within the application controller.
+  # def authenticate_admin!
+  #   redirect_to login_url unless current_user.admin?
+  # end
+  # config.authentication_method = :authenticate_admin!
   
-  config.authentication_method = false
-
-  #config.authentication_method = :authenticate_admin!
-  #def authenticate_admin!
-  #  redirect_to login_url unless current_user.admin?
-  #end
-
   # == User Authorization
   #
   # Active Admin will automatically call an authorization
@@ -94,7 +91,7 @@ ActiveAdmin.setup do |config|
   # This setting changes the method which Active Admin calls
   # (within the application controller) to return the currently logged in user.
   #config.current_user_method = :current_admin_user
-  config.current_user_method = false
+  config.current_user_method = :current_user # just returns the current logged-in user for the application
 
   # == Logging Out
   #
@@ -106,13 +103,13 @@ ActiveAdmin.setup do |config|
   # will call the method to return the path.
   #
   # Default:
-  config.logout_link_path = :destroy_admin_user_session_path
+  config.logout_link_path = "../logout"
 
   # This setting changes the http method used when rendering the
   # link. For example :get, :delete, :put, etc..
   #
   # Default:
-  # config.logout_link_method = :get
+  config.logout_link_method = :delete
 
   # == Root
   #
@@ -127,7 +124,7 @@ ActiveAdmin.setup do |config|
   # This allows your users to comment on any resource registered with Active Admin.
   #
   # You can completely disable comments:
-  config.allow_comments = false
+  #config.allow_comments = false
   #
   # You can disable the menu item for the comments index page:
   # config.show_comments_in_menu = false

@@ -1,6 +1,8 @@
 # coding: utf-8
 ActiveAdmin.register JdrAutoparseVenom, :as => "VExtractor Record", :namespace => :db do
 
+  config.comments = true
+
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
@@ -115,6 +117,8 @@ ActiveAdmin.register JdrAutoparseVenom, :as => "VExtractor Record", :namespace =
       # render('/admin/links_out', :model => 'jdr_autoparse_venoms', :venom => v_extractor_record)
     end
 
+    active_admin_comments
+
   end
 
   sidebar "Metadata", only: :show do
@@ -161,5 +165,7 @@ ActiveAdmin.register JdrAutoparseVenom, :as => "VExtractor Record", :namespace =
     end
 
   end
+
+  
 
 end
