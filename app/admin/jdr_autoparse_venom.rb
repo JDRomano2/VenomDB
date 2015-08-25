@@ -28,6 +28,10 @@ ActiveAdmin.register JdrAutoparseVenom, :as => "VExtractor Record", :namespace =
     column :pmid
   end
 
+  # action_item :flag, only: :show do
+  #   link_to 'Flag for review', home_path
+  # end
+
   show do
 
     panel "Venom information" do
@@ -113,6 +117,14 @@ ActiveAdmin.register JdrAutoparseVenom, :as => "VExtractor Record", :namespace =
       div :style => "font-style:italic" do
         simple_format "Note: the search query links above generally do not map to exact records, and not all searches will return matching results."
       end
+
+      hr
+
+      div do
+        "Think this record was included in the database erroneously? Click the following button to flag the record for review by the site's admins:"
+      end
+
+      
       
       # render('/admin/links_out', :model => 'jdr_autoparse_venoms', :venom => v_extractor_record)
     end

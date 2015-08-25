@@ -127,7 +127,7 @@ ActiveAdmin.setup do |config|
   #config.allow_comments = false
   #
   # You can disable the menu item for the comments index page:
-  # config.show_comments_in_menu = false
+  config.show_comments_in_menu = false
   #
   # You can change the name under which comments are registered:
   # config.comments_registration_name = 'AdminComment'
@@ -199,6 +199,16 @@ ActiveAdmin.setup do |config|
   #       menu.add label: "My Great Website", url: "http://www.mygreatwebsite.com", html_options: { target: :blank }
   #     end
   #   end
+  config.namespace :db do |admin|
+    admin.build_menu :utility_navigation do |menu|
+      menu.add label: "VenomKB Home", url: "http://venomkb.tatonettilab.org",
+               html_options: { target: :blank }
+      admin.add_logout_button_to_menu menu
+      
+      menu.add id: 'login', priority: 21, html_options: {}, label: 'Login', url: ->{'https://venomkb.herokuapp.com/login'}, if: (:current_active_admin_user? == false)
+      
+    end
+  end
 
   # == Download Links
   #

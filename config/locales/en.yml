@@ -21,3 +21,6 @@
 
 en:
   hello: "Hello world"
+  active_admin:
+    access_denied:
+      message: "You are not authorized to perform this action. Try logging in if you are not already."

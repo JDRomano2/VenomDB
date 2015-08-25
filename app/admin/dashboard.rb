@@ -31,6 +31,12 @@ ActiveAdmin.register_page "Dashboard", namespace: :db do
     #   end
     # end
 
+    panel "Comment on new community editing functionality" do
+      para "VenomKB now supports community editing and comments on individual database records."
+
+      para "To make use of these new features, create a free (and secure) user account. Once you are logged in, you will see new \"Add\" and \"Edit\" buttons when browsing the database. You will also be able to post comments once logged in."
+    end
+
     columns do
       
       column do
@@ -43,6 +49,7 @@ ActiveAdmin.register_page "Dashboard", namespace: :db do
       column do
         panel "Recent News and Updates" do
           ul do
+            li "2015-08-13: We have added a number of new community editing features. Guests can now create user accounts, and logged-in users can add new database records and comment on existing ones!"
             li "2015-06-24: Individual database record pages now have search query links for a number of related databases and ontologies"
             li "2015-06-23: 'Semantic VExtractor' and 'VExtractor' have been manually reviewed for bad records and updated on the website"
           end
