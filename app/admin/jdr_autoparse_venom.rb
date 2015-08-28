@@ -18,19 +18,22 @@ ActiveAdmin.register JdrAutoparseVenom, :as => "VExtractor Record", :namespace =
 
   permit_params :venom, :effect, :pmid
 
+  controller do
+    actions :all, :except => [:edit, :destroy]
+  end
+
+  action_item :flag_for_review, only: :show do
+    link_to 'Flag for review', flag_jdr_autoparse_venom_path, method: :put
+  end
+  
   index do
-    #column("ID", :sortable => :id) {|item| link_to "#{item.id}", admin_v_extractor_records_path(item) }
     selectable_column
     id_column
-    #actions
     column :venom
     column :effect
     column :pmid
+    column("Flagged for review?") { |venom| venom.status.nil? ? status_tag("not flagged") : status_tag("flagged", :error) }
   end
-
-  # action_item :flag, only: :show do
-  #   link_to 'Flag for review', home_path
-  # end
 
   show do
 

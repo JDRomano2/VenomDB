@@ -16,6 +16,6 @@ class SessionsController < ApplicationController
 
   def destroy
     log_out if logged_in?
-    redirect_to root_url
+    redirect_to root_url, notice: "This record has been flagged for review by site administrators"
   end
 end

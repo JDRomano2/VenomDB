@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150813171725) do
+ActiveRecord::Schema.define(version: 20150828170401) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -28,13 +28,8 @@ ActiveRecord::Schema.define(version: 20150813171725) do
   add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace"
   add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id"
 
-  create_table "jdr_autoparse_venoms", force: true do |t|
-    t.string   "venom"
-    t.string   "effect"
-    t.string   "pmid"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+# Could not dump table "jdr_autoparse_venoms" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "manual_venoms", force: true do |t|
     t.text     "venom"
@@ -42,6 +37,7 @@ ActiveRecord::Schema.define(version: 20150813171725) do
     t.text     "pmid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean  "status"
   end
 
   create_table "smdb_search_venoms", force: true do |t|
@@ -51,6 +47,7 @@ ActiveRecord::Schema.define(version: 20150813171725) do
     t.string   "pmid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean  "status"
   end
 
   create_table "users", force: true do |t|

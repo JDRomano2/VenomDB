@@ -17,6 +17,10 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
   resources :users
 
+  put 'jdr_autoparse_venom/:id' => 'jdr_autoparse_venoms#flag', as: 'flag_jdr_autoparse_venom'
+  put 'smdb_search_venom/:id' => 'smdb_search_venoms#flag', as: 'flag_smdb_search_venom'
+  put 'manual_venom/:id' => 'manual_venoms#flag', as: 'flag_manual_venom'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

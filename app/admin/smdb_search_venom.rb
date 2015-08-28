@@ -1,7 +1,8 @@
 # coding: utf-8
 ActiveAdmin.register SmdbSearchVenom, :as => "SemanticVExtractor Record", :namespace => :db do
 
-
+  config.comments = true
+  
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
@@ -17,15 +18,19 @@ ActiveAdmin.register SmdbSearchVenom, :as => "SemanticVExtractor Record", :names
 
   permit_params :compound, :predicate, :object, :pmid
 
+  action_item :flag_for_review, only: :show do
+    link_to 'Flag for review', flag_smdb_search_venom_path, method: :put
+  end
+
   index do
     #column("ID", :sortable => :id) {|item| link_to "#{item.id}", admin_v_extractor_records_path(item) }
     selectable_column
     id_column
-    #actions
     column :compound
     column :predicate
     column :object
     column :pmid
+    column("Flagged for review?") { |venom| venom.status.nil? ? status_tag("not flagged") : status_tag("flagged", :error) }
   end
 
 

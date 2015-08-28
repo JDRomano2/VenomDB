@@ -1,5 +1,3 @@
-require 'csv'
-
 namespace :db do
   
   desc "Imports database entries from CSV file"
