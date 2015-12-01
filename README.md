@@ -1,28 +1,9 @@
-== README
+# ABOUT
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+VenomKB is a new knowledge base for studying and validating putative therapeutic uses for venoms and venom-derived compounds.
 
-Things you may want to cover:
+This repository contains the source for the VenomKB website, implemented in Ruby on Rails.
 
-* Ruby version
+NOTE: Although the source files for the databases on VenomKB are located in this repository, they are not guaranteed to be up-to-date! For up-to-date data, please visit the website directly.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+If you encounter any issues with the website or the code contained within, please either contact the author at jdr2160@cumc.columbia.edu, or file a new Issue on the GitHub version of the repository.
