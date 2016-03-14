@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'inherited_resources', github: 'codecraft63/inherited_resources', branch: 'master'
-gem 'activeadmin', '1.0.0.pre', github: 'activeadmin'
+gem 'inherited_resources', '~> 1.6'
+gem 'activeadmin', '1.0.0.pre2', github: 'activeadmin'
 
 gem 'figaro'
 gem 'puma'

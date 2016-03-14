@@ -25,4 +25,4 @@
 
 # Bundler stuff and whatnot
 /.bundle
-/vendor/bundle
+vendor/bundle
