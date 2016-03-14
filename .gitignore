@@ -18,3 +18,11 @@
 # Ignore vim swapfiles
 *.swp
 .elasticbeanstalk/
+
+# Ignore sensitive files needed for deployment with Capistrano and Puma
+/config/database.yml
+/config/application.yml
+
+# Bundler stuff and whatnot
+/.bundle
+/vendor/bundle

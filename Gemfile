@@ -1,9 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'inherited_resources', github: 'codecraft63/inherited_resources', branch: 'master'
-gem 'activeadmin', github: 'activeadmin'
+gem 'activeadmin', '1.0.0.pre', github: 'activeadmin'
 
-
+gem 'figaro'
+gem 'puma'
 gem 'rails',                   '4.2.0.beta4'
 gem 'bcrypt',                  '3.1.7'
 gem 'faker',                   '1.4.2'
@@ -26,6 +27,11 @@ group :development, :test do
   gem 'byebug',      '3.4.0'
   gem 'web-console', '2.0.0.beta3'
   gem 'spring',      '1.1.3'
+  gem 'capistrano'
+  gem 'capistrano3-puma'
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-rvm'
 end
 
 group :test do
