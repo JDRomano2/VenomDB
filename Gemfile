@@ -5,7 +5,7 @@ gem 'activeadmin', '1.0.0.pre2', github: 'activeadmin'
 
 gem 'figaro'
 gem 'puma'
-gem 'rails',                   '4.2.0.beta4'
+gem 'rails',                   '~> 4.2'
 gem 'bcrypt',                  '3.1.7'
 gem 'faker',                   '1.4.2'
 gem 'will_paginate',           '3.0.7'
