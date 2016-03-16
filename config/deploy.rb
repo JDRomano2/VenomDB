@@ -7,10 +7,11 @@ set :branch, :master
 set :deploy_to, '/home/deploy/venomkb'
 set :pty, true
 set :linked_files, %w{config/database.yml config/application.yml}
-set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
+set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
 set :keep_releases, 5
 set :rvm_type, :user
 set :rvm_ruby_version, 'ruby-2.2.1'
+set :bundle_binstubs, nil
 
 set :puma_rackup, -> { File.join(current_path, 'config.ru') }
 set :puma_state, "#{shared_path}/tmp/pids/puma.state"
@@ -63,3 +64,17 @@ end
 # ps aux | grep puma    # Get puma pid
 # kill -s SIGUSR2 pid   # Restart puma
 # kill -s SIGTERM pid   # Stop puma
+
+namespace :rails do
+  desc "Remote Rails console"
+  task :console do
+    on roles(:app) do |h|
+      run_interactively "bundle exec rails console #{fetch(:rails_env)}", h.user
+    end
+  end
+
+  def run_interactively(command, user)
+    info "Running `#{command}` as #{user}@#{host}"
+    exec %Q(ssh #{user}@#{host} -t "bash --login -c 'cd #{fetch(:deploy_to)}/current && #{command}'")
+  end
+end
