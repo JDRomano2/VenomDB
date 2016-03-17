@@ -201,7 +201,7 @@ ActiveAdmin.setup do |config|
   #   end
   config.namespace :db do |admin|
     admin.build_menu :utility_navigation do |menu|
-      menu.add label: "VenomKB Home", url: "http://venomkb.tatonettilab.org",
+      menu.add label: "VenomKB Home", url: "http://venomkb.org",
                html_options: { target: :blank }
       admin.add_logout_button_to_menu menu
       
